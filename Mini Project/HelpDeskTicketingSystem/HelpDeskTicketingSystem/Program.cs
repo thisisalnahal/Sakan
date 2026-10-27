@@ -31,11 +31,14 @@ namespace HelpDeskTicketingSystem
             IAutoCloseService autoCloseService = new AutoCloseService(store, statusService);
             IAuthService authService = new AuthService(store, passwordHasher);
 
-           
+            IAdminService adminService = new AdminService(store, passwordHasher);
+
+
 
             List<IRoleMenu> menus = new List<IRoleMenu>
             {
-                
+              new AdminMenu(ui, adminService, ticketDisplay)
+
             };
 
             MenuRouter router = new MenuRouter(menus, ui);
