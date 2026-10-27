@@ -1,0 +1,9 @@
+namespace HelpDeskTicketingSystem.Interfaces.Auth
+{
+    internal interface IPasswordHasher
+    {
+        string Hash(string plainTextPassword);
+        bool Verify(string plainTextPassword, string storedHash);
+    }
+
+}
