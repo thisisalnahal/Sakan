@@ -35,13 +35,14 @@ namespace HelpDeskTicketingSystem
 
 
             IAdminService adminService = new AdminService(store, passwordHasher);
-
+            IClientService clientService = new ClientService(store, statusService, commentPermissionService);
 
 
             List<IRoleMenu> menus = new List<IRoleMenu>
             {
-              new AdminMenu(ui, adminService, ticketDisplay)
-              new DispatcherMenu(ui, dispatcherService, commentPermissionService, ticketDisplay),
+                new AdminMenu(ui, adminService, ticketDisplay)
+                new ClientMenu(ui, clientService, authService, commentPermissionService, ticketDisplay),
+                new DispatcherMenu(ui, dispatcherService, commentPermissionService, ticketDisplay),
             };
 
             MenuRouter router = new MenuRouter(menus, ui);
