@@ -30,6 +30,9 @@ namespace HelpDeskTicketingSystem
             IDueDateCalculator dueDateCalculator = new DueDateCalculator();
             IAutoCloseService autoCloseService = new AutoCloseService(store, statusService);
             IAuthService authService = new AuthService(store, passwordHasher);
+            IAssignmentService assignmentService = new AssignmentService(store);
+            IDispatcherService dispatcherService = new DispatcherService(store, statusService, commentPermissionService, assignmentService, dueDateCalculator);
+
 
             IAdminService adminService = new AdminService(store, passwordHasher);
             IClientService clientService = new ClientService(store, statusService, commentPermissionService);
@@ -39,6 +42,7 @@ namespace HelpDeskTicketingSystem
             {
                 new AdminMenu(ui, adminService, ticketDisplay)
                 new ClientMenu(ui, clientService, authService, commentPermissionService, ticketDisplay),
+                new DispatcherMenu(ui, dispatcherService, commentPermissionService, ticketDisplay),
             };
 
             MenuRouter router = new MenuRouter(menus, ui);
