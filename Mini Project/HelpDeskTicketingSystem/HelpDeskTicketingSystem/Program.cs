@@ -31,18 +31,19 @@ namespace HelpDeskTicketingSystem
             IAutoCloseService autoCloseService = new AutoCloseService(store, statusService);
             IAuthService authService = new AuthService(store, passwordHasher);
             IAssignmentService assignmentService = new AssignmentService(store);
+          
             IDispatcherService dispatcherService = new DispatcherService(store, statusService, commentPermissionService, assignmentService, dueDateCalculator);
-
-
             IAdminService adminService = new AdminService(store, passwordHasher);
+            IAgentService agentService = new AgentService(store, statusService, commentPermissionService);
             IClientService clientService = new ClientService(store, statusService, commentPermissionService);
-
+            
 
             List<IRoleMenu> menus = new List<IRoleMenu>
             {
-                new AdminMenu(ui, adminService, ticketDisplay)
+                new AdminMenu(ui, adminService, ticketDisplay),
                 new ClientMenu(ui, clientService, authService, commentPermissionService, ticketDisplay),
                 new DispatcherMenu(ui, dispatcherService, commentPermissionService, ticketDisplay),
+                new AgentMenu(ui, agentService, commentPermissionService, ticketDisplay)
             };
 
             MenuRouter router = new MenuRouter(menus, ui);
