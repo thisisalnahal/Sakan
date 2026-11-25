@@ -9,6 +9,7 @@ namespace Sakan.DAL.DataBase
         {
             optionsBuilder.UseSqlServer("Server=.;Database=Sakan;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
         }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -34,5 +35,13 @@ namespace Sakan.DAL.DataBase
         public DbSet<HostPayout> HostPayouts { get; set; }
         public DbSet<HostPenalty> HostPenalties { get; set; }
         public DbSet<HostPenaltyDeduction> HostPenaltyDeductions { get; set; }
+        
+        public DbSet<Dispute> Disputes { get; set; }
+        public DbSet<DisputeEvidence> DisputeEvidences { get; set; }
+        public DbSet<DisputeResolution> DisputeResolutions { get; set; }
+        public DbSet<Conversation> Conversations { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<UserReview> UserReviews { get; set; }
+        public DbSet<ListingReview> ListingReviews { get; set; }
     }
 }
