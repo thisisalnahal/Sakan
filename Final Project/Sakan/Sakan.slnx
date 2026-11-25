@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="Sakan.BLL/Sakan.BLL.csproj" />
+  <Project Path="Sakan.DAL/Sakan.DAL.csproj" />
   <Project Path="Sakan.PL/Sakan.PL.csproj" />
 </Solution>
