@@ -9,7 +9,24 @@ namespace Sakan.DAL.DataBase
         {
             optionsBuilder.UseSqlServer("Server=.;Database=Sakan;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
         }
-
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
+        }
+        
+        public DbSet<ApplicationUser> Users { get; set; } = null!;
+        public DbSet<IdentityVerification> IdentityVerifications { get; set; } = null!;
+        public DbSet<PaymentMethod> PaymentMethods { get; set; } = null!;
+        public DbSet<AuditLog> AuditLogs { get; set; } = null!;
+        
+        public DbSet<Listing> Listings => Set<Listing>();
+        public DbSet<ListingPrice> ListingPrices => Set<ListingPrice>();
+        public DbSet<ListingImage> ListingImages => Set<ListingImage>();
+        public DbSet<Booking> Bookings => Set<Booking>();
+        public DbSet<BookingStatusHistory> BookingStatusHistories => Set<BookingStatusHistory>();
+        public DbSet<AvailabilityBlock> AvailabilityBlocks => Set<AvailabilityBlock>();
+        
         //finance 
         public DbSet<PaymentAuthorization> PaymentAuthorizations { get; set; }
         public DbSet<SecurityDeposit> SecurityDeposits { get; set; }
@@ -17,6 +34,5 @@ namespace Sakan.DAL.DataBase
         public DbSet<HostPayout> HostPayouts { get; set; }
         public DbSet<HostPenalty> HostPenalties { get; set; }
         public DbSet<HostPenaltyDeduction> HostPenaltyDeductions { get; set; }
-
     }
 }
