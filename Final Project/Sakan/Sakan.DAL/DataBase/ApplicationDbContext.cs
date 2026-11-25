@@ -5,7 +5,6 @@ namespace Sakan.DAL.DataBase
 {
     internal class ApplicationDbContext : DbContext
     {
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=.;Database=Sakan;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=true");
@@ -16,9 +15,17 @@ namespace Sakan.DAL.DataBase
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
+        
         public DbSet<ApplicationUser> Users { get; set; } = null!;
         public DbSet<IdentityVerification> IdentityVerifications { get; set; } = null!;
         public DbSet<PaymentMethod> PaymentMethods { get; set; } = null!;
         public DbSet<AuditLog> AuditLogs { get; set; } = null!;
+        
+        public DbSet<Listing> Listings => Set<Listing>();
+        public DbSet<ListingPrice> ListingPrices => Set<ListingPrice>();
+        public DbSet<ListingImage> ListingImages => Set<ListingImage>();
+        public DbSet<Booking> Bookings => Set<Booking>();
+        public DbSet<BookingStatusHistory> BookingStatusHistories => Set<BookingStatusHistory>();
+        public DbSet<AvailabilityBlock> AvailabilityBlocks => Set<AvailabilityBlock>();
     }
 }
