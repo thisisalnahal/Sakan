@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Enums.Dispute
 {
-    internal enum DisputeType
+    public enum DisputeType
     {
         CheckInIssue,
         DamageClaim

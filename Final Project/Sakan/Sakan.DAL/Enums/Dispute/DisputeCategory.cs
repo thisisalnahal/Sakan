@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Enums.Dispute
 {
-    internal enum DisputeCategory
+    public enum DisputeCategory
     {
         Occupied,
         NotAsAdvertised,

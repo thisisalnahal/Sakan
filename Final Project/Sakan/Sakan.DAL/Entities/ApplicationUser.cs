@@ -2,7 +2,7 @@
 namespace Sakan.DAL.Entities
 
 {
-    internal class ApplicationUser
+    public class ApplicationUser
     {
         public string ID { get; set; } = Guid.NewGuid().ToString();
         public string FullName { get; set; } = string.Empty;

@@ -2,7 +2,7 @@ using Sakan.DAL.Enums.Dispute;
 
 namespace Sakan.DAL.Entities
 {
-    internal class Dispute
+    public class Dispute
     {
         public int Id { get; set; }
         public int BookingId { get; set; }

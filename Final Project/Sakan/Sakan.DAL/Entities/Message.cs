@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Entities
 {
-    internal class Message
+    public class Message
     {
         public int Id { get; set; }
         public int ConversationId { get; set; }

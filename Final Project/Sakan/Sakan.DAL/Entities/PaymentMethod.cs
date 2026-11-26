@@ -2,7 +2,7 @@
 
 namespace Sakan.DAL.Entities
 {
-    internal class PaymentMethod
+    public class PaymentMethod
     {
         public int Id { get; set; }
         public string UserId { get; set; } = string.Empty;

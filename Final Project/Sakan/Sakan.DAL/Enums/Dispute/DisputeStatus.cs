@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Enums.Dispute
 {
-    internal enum DisputeStatus
+    public enum DisputeStatus
     {
         Open,
         UnderReview,

@@ -1,7 +1,7 @@
 ﻿namespace Sakan.DAL.Entities
 {
     // Append-only: no update and no delete anywhere in the code.
-    internal class AuditLog
+    public class AuditLog
     {
         public int Id { get; set; }
         public string ActorId { get; set; } = string.Empty;

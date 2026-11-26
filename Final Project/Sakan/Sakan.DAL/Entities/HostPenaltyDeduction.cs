@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Sakan.DAL.Entities
 {
-    internal class HostPenaltyDeduction
+    public class HostPenaltyDeduction
     {
         public int Id { get; set; }
         public decimal Amount { get; set; }

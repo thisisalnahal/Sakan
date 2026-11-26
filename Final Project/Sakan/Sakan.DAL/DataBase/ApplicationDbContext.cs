@@ -3,7 +3,7 @@ using Sakan.DAL.Entities;
 
 namespace Sakan.DAL.DataBase
 {
-    internal class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
         // M2
         public DbSet<Property> Properties { get; set; }

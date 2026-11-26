@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Sakan.DAL.Entities
 {
-    internal class IdentityVerification
+    public class IdentityVerification
     {
         [Key]
         public int Id { get; set; }

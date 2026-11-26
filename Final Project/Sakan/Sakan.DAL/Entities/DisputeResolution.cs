@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Entities
 {
-    internal class DisputeResolution
+    public class DisputeResolution
     {
         public int Id { get; set; }
         public int DisputeId { get; set; }

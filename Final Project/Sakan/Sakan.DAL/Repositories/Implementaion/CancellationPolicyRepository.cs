@@ -2,7 +2,6 @@
 using Sakan.DAL.DataBase;
 using Sakan.DAL.Entities;
 using Sakan.DAL.Repositories.Abstraction;
-using Sakan.DAL.Repositories.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sakan.DAL.Entities
 {
-    internal class HostPayout
+    public class HostPayout
     {
         public int Id { get; set; }
         public PayoutType PayoutType { get; set; }

@@ -1,6 +1,6 @@
 namespace Sakan.DAL.Entities
 {
-    internal class UserReview
+    public class UserReview
     {
         public int Id { get; set; }
         public int BookingId { get; set; }

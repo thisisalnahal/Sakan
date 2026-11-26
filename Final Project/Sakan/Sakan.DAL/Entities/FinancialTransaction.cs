@@ -6,7 +6,7 @@ using System.Transactions;
 
 namespace Sakan.DAL.Entities
 {
-    internal class FinancialTransaction
+    public class FinancialTransaction
     {
         public int Id { get; set; }
         public TransactionType TransactionType { get; set; }

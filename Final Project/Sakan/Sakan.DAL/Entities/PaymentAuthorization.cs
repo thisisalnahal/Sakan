@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sakan.DAL.Entities
 {
-    internal class PaymentAuthorization
+    public class PaymentAuthorization
     {
         public int Id { get; set; }
         public decimal Amount { get; set; }                // = Booking.TotalAmount
