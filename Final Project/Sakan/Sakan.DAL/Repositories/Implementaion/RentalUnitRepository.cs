@@ -12,7 +12,7 @@ namespace Sakan.DAL.Repositories.Implementaion
     {
         private readonly ApplicationDbContext Db;
 
-        public RentalUnitRepository(ApplicationDbContext db)
+        internal RentalUnitRepository(ApplicationDbContext db)
         {
             Db = db;
         }

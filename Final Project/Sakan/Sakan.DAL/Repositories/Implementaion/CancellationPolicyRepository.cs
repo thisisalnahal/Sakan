@@ -13,7 +13,7 @@ namespace Sakan.DAL.Repositories.Implementaion
     {
         private readonly ApplicationDbContext Db;
 
-        public CancellationPolicyRepository(ApplicationDbContext db)
+        internal CancellationPolicyRepository(ApplicationDbContext db)     
         {
             Db = db;
         }

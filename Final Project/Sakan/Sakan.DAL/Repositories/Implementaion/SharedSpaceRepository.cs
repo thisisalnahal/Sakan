@@ -12,7 +12,7 @@ namespace Sakan.DAL.Repositories.Implementaion
     {
         private readonly ApplicationDbContext Db;
 
-        public SharedSpaceRepository(ApplicationDbContext db)
+        internal SharedSpaceRepository(ApplicationDbContext db)
         {
             Db = db;
         }

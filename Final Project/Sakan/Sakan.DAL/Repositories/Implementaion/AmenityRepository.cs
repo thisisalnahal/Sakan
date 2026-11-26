@@ -3,6 +3,7 @@ using Sakan.DAL.Repositories.Abstraction;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Sakan.DAL.DataBase;
 
 namespace Sakan.DAL.Repositories.Implementaion
 {
@@ -10,7 +11,7 @@ namespace Sakan.DAL.Repositories.Implementaion
     {
         private readonly ApplicationDbContext Db;
 
-        public AmenityRepository(ApplicationDbContext db)
+        internal AmenityRepository(ApplicationDbContext db)
         {
             Db = db;
         }
