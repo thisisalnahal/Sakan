@@ -1,6 +1,6 @@
 ﻿using Sakan.DAL.Enums.ApplicationUser;
-
 namespace Sakan.DAL.Entities
+
 {
     internal class ApplicationUser
     {
